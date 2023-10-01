@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Racket</title>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Racket</h1>
+        </div>
+
+        <div>
+            <img id="image" alt="Racket" src="https://www.schoeler-micke.de/media/image/65/0c/e0/I-200-122275-6-inizio-konkav-gtt45-1-8-2000x200px.jpg">
+        </div>
+
+        <div>
+            <button id="color">Change Color</button>
+        </div>
+
+        <div class="homepage">
+            <a href="/index.html">
+                <h3>Homepage</h3>
+            </a>
+        </div>
+
+        <script>
+            document.querySelector("#color").onclick = function(){
+                let red = "https://www.schoeler-micke.de/media/image/65/0c/e0/I-200-122275-6-inizio-konkav-gtt45-1-8-2000x200px.jpg";
+                let blue = "https://www.schoeler-micke.de/media/image/20/6a/b9/120-021-077-andro-I-200-blue-2000x200px.jpg";
+                let pink = "https://www.schoeler-micke.de/media/image/01/f2/5b/120-021-079-andro-I-200-pink-2000x200px.jpg";
+                let img = document.querySelector("#image");
+                if (img.src == red) {
+                    img.src = img.src.replace(red, blue);
+                }
+                else if (img.src == blue) {
+                    img.src = img.src.replace(blue, pink);
+                }
+                else {
+                    img.src = img.src.replace(pink, red);
+                }
+            }
+        </script>
+    </body>
+</html>
